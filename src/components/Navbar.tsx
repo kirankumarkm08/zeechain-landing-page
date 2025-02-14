@@ -5,6 +5,7 @@ import Image from "next/image";
 import { navLinks } from "@/constants";
 import Link from "next/link";
 import MobileNavbar from "./MobileView/MobileNavbar";
+import Mobile_menu from "/public/assets/navbar/Mobile_menu.svg";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -43,14 +44,11 @@ const Navbar = () => {
       </button>
       <div className="md:hidden">
         <Image
-          src={"/assets/navbar/Mobile_menu.svg"}
+          src={Mobile_menu}
           alt="menu"
           className="w-[30px]"
           onClick={HandleMobileView}
-          width={40}
-          height={40}
         />
-
         {menu && <MobileNavbar />}
       </div>
     </div>
