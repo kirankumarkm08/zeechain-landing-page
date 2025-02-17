@@ -65,7 +65,7 @@ const Whyzee = () => {
 
   return (
     <div className="mx-auto max-w-[1280px] py-20 px-10 md:px-0">
-      <h1 className="bg-linear-gradient bg-clip-text text-transparent flex justify-center my-5 font-semibold text-18 xl:text-32 leading-tight">
+      <h1 className="bg-linear-gradient bg-clip-text text-transparent flex justify-center my-5 font-semibold text-18 xl:text-40 leading-tight">
         Why ZEE Chain?
       </h1>
       <div

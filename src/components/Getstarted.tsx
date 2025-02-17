@@ -54,7 +54,7 @@ const Get_started = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="bg-linear-gradient bg-clip-text text-transparent  flex justify-center my-5   font-semibold  text-18 xl:text-32 leading-tight"
+        className="bg-linear-gradient bg-clip-text text-transparent  flex justify-center my-5   font-semibold  text-18 xl:text-40 leading-tight"
       >
         Get-Started with Zero Chain
       </motion.h1>

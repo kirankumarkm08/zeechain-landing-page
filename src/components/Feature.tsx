@@ -81,7 +81,7 @@ function Features() {
         />
       </div> */}
 
-      <h1 className="text-center mb-12 text-2xl sm:text-3xl md:text-24 font-semibold bg-linear-gradient bg-clip-text text-transparent">
+      <h1 className="text-center mb-12 text-2xl sm:text-3xl md:text-24 lg:font-40 font-semibold bg-linear-gradient bg-clip-text text-transparent">
         Features of ZEE Chain
       </h1>
 

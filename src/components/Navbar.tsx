@@ -38,6 +38,8 @@ const Navbar = () => {
           alt="menu"
           className="w-[30px]"
           onClick={HandleMobileView}
+          width={30}
+          height={30}
         />
         {menu && <MobileNavbar />}
       </div>
