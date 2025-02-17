@@ -3,22 +3,6 @@
 import { useRef } from "react";
 import Image, { type StaticImageData } from "next/image";
 import { motion, useInView } from "framer-motion";
-import Solana from "/public/assets/Blockchain-logos/solana.svg";
-import Ethereum from "/public/assets/Blockchain-logos/Ethereum.svg";
-import BNB from "/public/assets/Blockchain-logos/BNB.svg";
-import Base from "/public/assets/Blockchain-logos/base.svg";
-import Mantle from "/public/assets/Blockchain-logos/mantle.svg";
-import Scroll from "/public/assets/Blockchain-logos/mantle.svg";
-import Arbitrum from "/public/assets/Blockchain-logos/arbitrum.svg";
-import Optimism from "/public/assets/Blockchain-logos/optimism.svg";
-import Linea from "/public/assets/Blockchain-logos/linea.svg";
-import Bitcoin from "/public/assets/Blockchain-logos/bitcoin.svg";
-import Stacks from "/public/assets/Blockchain-logos/Stacks.svg";
-import Citra from "/public/assets/Blockchain-logos/Citra.svg";
-import Thorchain from "/public/assets/Blockchain-logos/Thorchain.svg";
-import Avalanche from "/public/assets/Blockchain-logos/avalanche.svg";
-import Manta from "/public/assets/Blockchain-logos/Manta.svg";
-import Polygon from "/public/assets/Blockchain-logos/polygon.svg";
 
 interface Blockchain {
   icon: string | StaticImageData;
@@ -26,23 +10,22 @@ interface Blockchain {
 }
 
 const blockchains: Blockchain[] = [
-  { icon: Solana, label: "Solana" },
-  { icon: Ethereum, label: "Ethereum" },
-  { icon: Polygon, label: "Polygon" },
-
-  { icon: BNB, label: "BNB CHAIN" },
-  { icon: Base, label: "Base" },
-  { icon: Mantle, label: "Mantle" },
-  { icon: Scroll, label: "Scroll" },
-  { icon: Arbitrum, label: "Arbitrum" },
-  { icon: Optimism, label: "Optimism" },
-  { icon: Linea, label: "Linea" },
-  { icon: Bitcoin, label: "Bitcoin" },
-  { icon: Stacks, label: "Stacks" },
-  { icon: Citra, label: "Citra" },
-  { icon: Thorchain, label: "Thor-chain" },
-  { icon: Avalanche, label: "Avalanche" },
-  { icon: Manta, label: "Manta" },
+  { icon: "/assets/Blockchain-logos/solana.svg", label: "Solana" },
+  { icon: "/assets/Blockchain-logos/Ethereum.svg", label: "Ethereum" },
+  { icon: "/assets/Blockchain-logos/polygon.svg", label: "Polygon" },
+  { icon: "/assets/Blockchain-logos/BNB.svg", label: "BNB CHAIN" },
+  { icon: "/assets/Blockchain-logos/base.svg", label: "Base" },
+  { icon: "/assets/Blockchain-logos/mantle.svg", label: "Mantle" },
+  { icon: "/assets/Blockchain-logos/mantle.svg", label: "Scroll" },
+  { icon: "/assets/Blockchain-logos/arbitrum.svg", label: "Arbitrum" },
+  { icon: "/assets/Blockchain-logos/optimism.svg", label: "Optimism" },
+  { icon: "/assets/Blockchain-logos/linea.svg", label: "Linea" },
+  { icon: "/assets/Blockchain-logos/bitcoin.svg", label: "Bitcoin" },
+  { icon: "/assets/Blockchain-logos/Stacks.svg", label: "Stacks" },
+  { icon: "/assets/Blockchain-logos/Citra.svg", label: "Citra" },
+  { icon: "/assets/Blockchain-logos/Thorchain.svg", label: "Thor-chain" },
+  { icon: "/assets/Blockchain-logos/avalanche.svg", label: "Avalanche" },
+  { icon: "/assets/Blockchain-logos/Manta.svg", label: "Manta" },
 ];
 
 const container = {
