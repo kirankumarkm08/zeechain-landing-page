@@ -5,7 +5,6 @@ import Image from "next/image";
 import { navLinks } from "@/constants";
 import Link from "next/link";
 import MobileNavbar from "./MobileView/MobileNavbar";
-import Mobile_menu from "/public/assets/navbar/Mobile_menu.svg";
 import { useState } from "react";
 import CustomButton from "./Custom-Button";
 
@@ -35,7 +34,7 @@ const Navbar = () => {
       </div>
       <div className="md:hidden">
         <Image
-          src={Mobile_menu}
+          src={"/assets/navbar/Mobile_menu.svg"}
           alt="menu"
           className="w-[30px]"
           onClick={HandleMobileView}
