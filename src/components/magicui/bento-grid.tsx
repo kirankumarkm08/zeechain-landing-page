@@ -1,14 +1,13 @@
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import { motion, type MotionProps } from "framer-motion";
+import { motion, type MotionProps, type HTMLMotionProps } from "framer-motion";
 
-interface BentoGridProps extends ComponentPropsWithoutRef<"div"> {
+interface BentoGridProps extends ComponentPropsWithoutRef<typeof motion.div> {
   children: ReactNode;
   className?: string;
 }
 
-interface BentoCardProps
-  extends Omit<ComponentPropsWithoutRef<"div">, "className"> {
+interface BentoCardProps extends Omit<HTMLMotionProps<"div">, "className"> {
   name: string;
   className: string;
   background: string;
@@ -18,7 +17,10 @@ interface BentoCardProps
 const BentoGrid = ({ children, className, ...props }: BentoGridProps) => {
   return (
     <motion.div
-      className={cn("grid w-full gap-6", className)}
+      className={cn(
+        "grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+        className
+      )}
       {...props}
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}

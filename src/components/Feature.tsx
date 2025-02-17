@@ -1,7 +1,6 @@
 "use client";
 
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
-import Image from "next/image";
 
 interface featuresArray {
   name: string;

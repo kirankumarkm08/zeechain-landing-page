@@ -18,7 +18,6 @@ import Citra from "/public/assets/Blockchain-logos/Citra.svg";
 import Thorchain from "/public/assets/Blockchain-logos/Thorchain.svg";
 import Avalanche from "/public/assets/Blockchain-logos/avalanche.svg";
 import Manta from "/public/assets/Blockchain-logos/Manta.svg";
-import Divider from "/public/assets/background-assets/Divider.svg";
 import Polygon from "/public/assets/Blockchain-logos/polygon.svg";
 
 interface Blockchain {
@@ -105,7 +104,7 @@ export default function Blockchains() {
           animate={isInView ? "show" : "hidden"}
           className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-4 gap-y-8 sm:gap-x-6 sm:gap-y-10 md:gap-8 lg:gap-[40px] max-w-fit mx-auto "
         >
-          {blockchains.map((chain, index) => (
+          {blockchains.map((chain) => (
             <motion.div
               key={chain.label}
               variants={item}
