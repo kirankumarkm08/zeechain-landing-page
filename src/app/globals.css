@@ -6,5 +6,11 @@ body {
   font-family: "Inter", sans-serif;
   /* font-style: normal; */
   scroll-behavior: smooth;
-  background-color: #000212;
+  background-color: #09090a;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
 }

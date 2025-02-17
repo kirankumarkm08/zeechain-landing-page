@@ -1,38 +1,98 @@
-import React from "react";
-import Gas_Less from "/public/assets/Features/gas_less_protocol.png";
-import Market_analytics from "/public/assets/Features/market_Analytics.png";
-import AI_Powered from "/public/assets/Features/AI_powered.png";
-import AI_managed from "/public/assets/Features/AI_managed.png";
-import AI_Powered_DAO from "/public/assets/Features/AI_powered_DAO.png";
-import Smarter_Yield from "/public/assets/Features/smarter_yield.png";
-import AI_Driven from "/public/assets/Features/AI_driven.png";
-import Cross_chain from "/public/assets/Features/cross_chain.png";
+"use client";
+
+import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import Image from "next/image";
 
-const Feature = () => {
+interface featuresArray {
+  name: string;
+  background: string;
+  className: string;
+  textPosition: "top-left" | "top-right" | "bottom";
+}
+
+const features: featuresArray[] = [
+  {
+    name: "100% Gas-less Protocol",
+    background: "/assets/Features/Card1.svg",
+    className:
+      "col-span-2 md:col-span-3  row-span-3   col-start-1 lg:col-start-1 lg:col-end-1 lg:row-end-3",
+    textPosition: "top-left",
+  },
+  {
+    name: "AI powered personalised learning about DeFi",
+    background: "/assets/Features/Card2.svg",
+    className:
+      "col-span-2 md:col-span-3  row-span-2 col-start-1  lg:col-start-2 lg:col-end-2 lg:-row-start-2 lg:row-end-",
+    textPosition: "bottom",
+  },
+  {
+    name: "Smarter Yield Optimization",
+    background: "/assets/Features/Card3.svg",
+    className:
+      "col-span-2 md:col-span-3  row-span-1 col-start-1 lg:col-start-3  lg:col-end-3 lg:-row-start-2 lg:row-end-3",
+    textPosition: "top-right",
+  },
+  {
+    name: "Predictive Market Analytics",
+    background: "/assets/Features/Card4.svg",
+    className:
+      " col-span-2 md:col-span-3  row-span-3 lg:col-start-1 lg:col-end-2 lg:row-start-3",
+    textPosition: "top-left",
+  },
+  {
+    name: "AI Managed Interoperability",
+    background: "/assets/Features/Card5.svg",
+    className:
+      "col-span-2 md:col-span-3 row-span-3 lg:col-start-2 lg:col-end-2 lg:row-start-4 lg:row-end-2",
+    textPosition: "top-left",
+  },
+  {
+    name: "AI Driven Trading Bots",
+    background: "/assets/Features/Card6.svg",
+    className:
+      " col-span-2 md:col-span-3   row-span-1 lg:col-start-3 lg:col-end-4 lg:row-start-3 lg:row-end-3",
+    textPosition: "top-right",
+  },
+  {
+    name: "AI Powered DAO Governance",
+    background: "/assets/Features/Card7.svg",
+    className:
+      "col-span-2 md:col-span-3  row-span-1 lg:col-start-2 lg:col-end-3 lg:row-start-6 lg:row-end-4",
+    textPosition: "top-left",
+  },
+  {
+    name: "Cross Chain Liquidity Hub",
+    background: "/assets/Features/Card8.svg",
+    className:
+      "col-span-2 md:col-span-3 row-span-1 lg:col-start-3 lg:col-end-4 lg:row-start-4 lg:row-end-6",
+    textPosition: "bottom",
+  },
+];
+
+function Features() {
   return (
-    <div className="mx-auto max-w-[1280px] py-20 bg-background_mesh">
-      <h1 className=" bg-linear-gradient bg-clip-text text-transparent   flex justify-center my-5   font-semibold  text-18 xl:text-32 leading-tight">
+    <div className="p-4 sm:p-6 md:p-8 mt-10 relative  ">
+      {/* <div className="">
+        <Image
+          src="/assets/background-assets/Ellipse.svg"
+          alt="bg"
+          className=" "
+          width={10000}
+          height={1000}
+        />
+      </div> */}
+
+      <h1 className="text-center mb-12 text-2xl sm:text-3xl md:text-24 font-semibold bg-linear-gradient bg-clip-text text-transparent">
         Features of ZEE Chain
       </h1>
-      <div className="  grid md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center ">
-        <div className=" gap-5 flex flex-col">
-          <Image src={Gas_Less} alt="" />
-          <Image src={Market_analytics} alt="" />
-        </div>
-        <div className="gap-5 flex flex-col">
-          <Image src={AI_Powered} alt="" />
-          <Image src={AI_managed} alt="" />
-          <Image src={AI_Powered_DAO} alt="" />
-        </div>
-        <div className="gap-5 flex flex-col">
-          <Image src={Smarter_Yield} alt="" />
-          <Image src={AI_Driven} alt="" />
-          <Image src={Cross_chain} alt="" />
-        </div>
-      </div>
+
+      <BentoGrid className=" lg:grid-cols-3 auto-rows-[120px] sm:auto-rows-[150px] md:auto-rows-[180px] gap-3 sm:gap-4 md:gap-6 max-w-[1400px] mx-auto">
+        {features.map((feature) => (
+          <BentoCard key={feature.name} {...feature} />
+        ))}
+      </BentoGrid>
     </div>
   );
-};
+}
 
-export default Feature;
+export default Features;

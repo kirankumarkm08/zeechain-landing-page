@@ -2,10 +2,11 @@ import React from "react";
 import { navLinks } from "@/constants";
 import Link from "next/link";
 import Image from "next/image";
+import CustomButton from "../Custom-Button";
 
 const MobileNavbar = () => {
   return (
-    <div className="absolute   justify-center items-center   w-full start-0 h-[7800px]   bg-primary y ">
+    <div className="absolute   justify-center items-center   w-full start-0 h-[7800px]   bg-primary">
       {navLinks.map((navs) => (
         <Link
           key={navs.label}
@@ -16,10 +17,7 @@ const MobileNavbar = () => {
           <Image src={navs.icon} alt={navs.label} />
         </Link>
       ))}
-      <button className="bg-purple-600 rounded-full h-[36px] py-4 text-white-900 font-semibold md:hidden flex justify-center items-center w-full px-20 ">
-        {" "}
-        Register for Test-Net
-      </button>
+      <CustomButton />
     </div>
   );
 };
