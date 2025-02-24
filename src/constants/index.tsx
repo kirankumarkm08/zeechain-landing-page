@@ -1,5 +1,11 @@
 import Arrow from "/public/assets/navbar/Arrow.svg";
-import { NavLinks, LearnLinks, CommunityLinks, ZEELinks } from "@/types";
+import {
+  NavLinks,
+  LearnLinks,
+  CommunityLinks,
+  ZEELinks,
+  Products,
+} from "@/types";
 
 export const navLinks: NavLinks[] = [
   {
@@ -71,4 +77,89 @@ export const Community: CommunityLinks[] = [
     link: "",
     icon: "",
   },
+];
+
+export const Product: Products[] = [
+  {
+    label: "Products",
+    title: "Products",
+    description: "Explore our suite of products",
+    href: "#",
+    icon: "/assets/navbar/icon.svg",
+    dropdownItems: [
+      {
+        title: "Exchange",
+        description:
+          "Bridge assets across chains with zero fee and gasless transactions",
+        icon: "/assets/icons/exchange.svg",
+        href: "/exchange",
+      },
+      {
+        title: "Staking",
+        description: "Stake to earn rewards and participate in ZeeDAO",
+        icon: "/assets/icons/staking.svg",
+        href: "/staking",
+      },
+      {
+        title: "Bridge",
+        description: "Bi-Directional bridge between ZEE tokens on multi-chain",
+        icon: "/assets/icons/bridge.svg",
+        href: "/bridge",
+      },
+      {
+        title: "ZeeDo",
+        description: "Simple and Fair Dex Token Offering",
+        icon: "/assets/icons/zeedo.svg",
+        href: "/zeedo",
+      },
+      {
+        title: "Predictions",
+        description: "Predict future without losing money",
+        icon: "/assets/icons/predictions.svg",
+        href: "/predictions",
+      },
+      {
+        title: "Test Drive",
+        description: "Try out our incentivized testnets",
+        icon: "/assets/icons/test-drive.svg",
+        href: "/test-drive",
+      },
+    ],
+  },
+  // Add other nav items as needed
+];
+
+export const CommunitySocial = [
+  // ... other nav items ...
+  {
+    label: "Community",
+    icon: "/assets/navbar/arrow-down.svg",
+    dropdownItems: [
+      {
+        title: "Discord",
+        description: "Join our community chat",
+        icon: "/assets/navbar/discord.svg",
+        href: "/discord",
+      },
+      {
+        title: "Twitter",
+        description: "Follow us for updates",
+        icon: "/assets/navbar/twitter.svg",
+        href: "/twitter",
+      },
+      {
+        title: "Blog",
+        description: "Read our latest news",
+        icon: "/assets/navbar/blog.svg",
+        href: "/blog",
+      },
+      {
+        title: "Forum",
+        description: "Discuss with the community",
+        icon: "/assets/navbar/forum.svg",
+        href: "/forum",
+      },
+    ],
+  },
+  // ... other nav items ...
 ];

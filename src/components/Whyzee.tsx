@@ -4,6 +4,9 @@ import { useEffect } from "react";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Left_ellipse from "/public/assets/background-assets/left_Ellipse.svg";
+import Ellipse from "/public/assets/background-assets/Eclipse.svg";
+import Rectangle from "/public/assets/background-assets/Rectangle.svg";
 
 interface Zeechain {
   icon: string;
@@ -57,46 +60,59 @@ const Whyzee = () => {
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.1,
+        delay: i * 0.2,
         duration: 0.5,
       },
     }),
   };
 
   return (
-    <div className="mx-auto max-w-[1280px] py-20 px-10 md:px-0">
-      <h1 className="bg-linear-gradient bg-clip-text text-transparent flex justify-center my-5 font-semibold text-18 xl:text-40 leading-tight">
-        Why ZEE Chain?
-      </h1>
-      <div
-        className="grid md:grid-cols-1 lg:grid-cols-2 gap-y-14 justify-center"
-        ref={ref}
-      >
-        {zeechain.map((data, index) => (
-          <motion.div
-            key={data.label}
-            className="max-w-[580px] bg-card_background border-2 border-lightgray rounded-3xl font-inter px-10 py-2 justify-start items-start"
-            variants={cardVariants}
-            initial="hidden"
-            animate={controls}
-            custom={index}
-          >
-            <Image
-              src={data.icon || "/placeholder.svg"}
-              alt=""
-              width={100}
-              height={100}
-              className="-ml-4"
-            />
-            <h2 className="leading-[41px] line-clamp-[-0.16px] text-32 text-white-500 font-semibold font-clash ">
-              {data.label}
-            </h2>
-            <p className="text-14 leading-[21px] text-white-700 font-normal font-inter my-2">
-              {data.description}
-            </p>
-          </motion.div>
-        ))}
-      </div>
+    <div className="relative">
+      <Image src={Ellipse} alt="" className=" absolute  left-1/4 -top-10" />
+      <Image
+        src={Rectangle}
+        alt=""
+        className=" absolute blur-lg left-1/4 -top-10 "
+      />
+      <Image
+        src={Left_ellipse}
+        alt="bg"
+        className="absolute  top-1/2 start-0 "
+      />
+      <div className=" py-20 px-4 mx-auto max-w-[1440px] relative">
+        <h1 className="text-center mb-12 text-2xl sm:text-3xl md:text-40 font-semibold bg-Section-title-gradient bg-clip-text text-transparent font-display leading-166 tracking-wide">
+          Why ZEE Chain?
+        </h1>
+        <div
+          className="grid md:grid-cols-1 lg:grid-cols-2 gap-14 place-items-center md:mx-20 -z-10 "
+          ref={ref}
+        >
+          {zeechain.map((data, index) => (
+            <motion.div
+              key={data.label}
+              className="w-full max-w-[580px] h-full bg-black border-b border-pink-400 rounded-3xl p-8 backdrop-blur-lg"
+              variants={cardVariants}
+              initial="hidden"
+              animate={controls}
+              custom={index}
+            >
+              <Image
+                src={data.icon || "/placeholder.svg"}
+                alt=""
+                width={100}
+                height={100}
+                className="-ml-4"
+              />
+              <h2 className="leading-[41px] line-clamp-[-0.16px] text-32 text-white-500 font-semibold font-display">
+                {data.label}
+              </h2>
+              <p className="text-14 leading-22 text-white-700 font-light font-inter mt-2">
+                {data.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>{" "}
     </div>
   );
 };

@@ -3,17 +3,17 @@ import Hero from "@/components/Hero";
 import Blockchains from "@/components/Blockchains";
 import Features from "@/components/Feature";
 import Whyzee from "@/components/Whyzee";
-import Getstarted from "@/components/Getstarted";
+import Blog from "@/components/Blog";
 import Newsletter from "@/components/Newsletter";
 
 const page = () => {
   return (
-    <div className="">
+    <div className="  overflow-hidden">
       <Hero />
       <Blockchains />
       <Features />
       <Whyzee />
-      <Getstarted />
+      <Blog />
       <Newsletter />
     </div>
   );

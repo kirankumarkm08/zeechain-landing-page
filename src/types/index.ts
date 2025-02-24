@@ -18,3 +18,20 @@ export interface CommunityLinks {
   link: string;
   icon: string;
 }
+
+export interface DropdownItem {
+  title: string;
+  description: string;
+  icon: string;
+  href: string;
+}
+
+// Define the type for a navigation link
+export interface Products {
+  label?: string;
+  title: string;
+  href: string;
+  icon: string;
+  description: string;
+  dropdownItems?: DropdownItem[];
+}

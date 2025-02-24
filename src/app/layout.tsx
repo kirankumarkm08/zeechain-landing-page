@@ -17,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${clash_Display.className}  ${inter.className}`}>
+      <body
+        className={` ${clash_Display.className} ${inter.variable} antialiased`}
+      >
         <Navbar />
         {children}
         <Footer />

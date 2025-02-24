@@ -54,14 +54,14 @@ const BentoCard = ({
   return (
     <motion.div
       className={cn(
-        "group relative flex flex-col overflow-hidden rounded-2xl border border-lightgray transition-all duration-300",
+        "group relative flex flex-col overflow-hidden bg-card_background rounded-2xl border border-purple-400 transition-all duration-300",
         className
       )}
       {...props}
       {...motionProps}
     >
       <motion.div
-        className="absolute inset-0 bg-cover bg-center opacity-50 transition-opacity duration-300 group-hover:opacity-60"
+        className="absolute inset-0 bg-cover bg-center  transition-opacity duration-300  opacity-30 group-hover:opacity-95  hover:shadow-2xl"
         style={{ backgroundImage: `url(${background})` }}
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
@@ -77,7 +77,7 @@ const BentoCard = ({
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
         <motion.h3
-          className="text-24 font-clash font-medium tracking-wide leading-relaxed bg-linear-gradient bg-clip-text text-transparent"
+          className="text-24 font-clash font-medium  bg-linear-gradient bg-clip-text text-transparent"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}

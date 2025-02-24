@@ -60,7 +60,7 @@ export default {
           "700": "#C8C8C8",
           "800": "#999999",
         },
-        purple: {
+        blue: {
           "50": "#eff0fe",
           "100": "#e0e0fc",
           "200": "#c1c2f9",
@@ -72,22 +72,47 @@ export default {
           "800": "#282960",
           "900": "#141430",
         },
+        golden_yellow: {
+          "50": "#fff9f1",
+          "100": "#fff3e2",
+          "200": "#ffe8c5",
+          "300": "#ffdca9",
+          "400": "#ffd18c",
+          "500": "#ffc56f",
+          "600": "#cc9e59",
+          "700": "#997643",
+          "800": "#664f2c",
+          "900": "#B66C37",
+        },
+        Pink: {
+          "50": "#fff1ff",
+          "100": "#fee3ff",
+          "200": "#fec7ff",
+          "300": "#fdaaff",
+          "400": "#fd8eff",
+          "500": "#fc72ff",
+          "600": "#ca5bcc",
+          "700": "#974499",
+          "800": "#652e66",
+          "900": "#321733",
+        },
       },
       fontFamily: {
-        "clash-display": ["var(--font-clash-display)"],
-        inter: ["var(--font-inter)"],
+        inter: ["var(--font-inter)", "sans-serif"],
+        display: ["var(--font-clash-display)", "sans-serif"],
       },
       borderColor: {
         lightgray: "rgba(255, 255, 255, 0.15)",
       },
       backgroundImage: {
+        button_bg: "linear-gradient(107deg, #FFC56F 13.43%, #B66C37 55.18%)",
+
         "linear-gradient":
           "linear-gradient(to bottom, rgba(237, 237, 237, 1) 0%, rgba(237, 237, 237, 1) 50%, rgba(237, 237, 237, 0.41) 100%)",
         "text-top-buttom-linear": "linear-gradient(to right, #FFFFFF, #999999)",
-
+        shadow_bg: "url('/assets/background-assets/bg-shadow.svg')",
         "Section-title-gradient":
           "linear-gradient(180deg, #EDEDED 0%, #EDEDED 0.02%, rgba(237, 237, 237, 0.41) 154.75%)",
-
         background_mesh_gradient:
           "url('/assets/background-assets/Background_Mesh_gradient.svg')",
         Newsletter_bg: "url('/assets/background-assets/newsletter_bg1.png')",
@@ -95,6 +120,7 @@ export default {
           "url('/assets/background-assets/Background_gradient.svg')",
         background_dot: "url('/assets/background-assets/bg-dots.png')",
         ellipse: "url('/assets/background-assets/Ellipse.svg')",
+        footer_mesh: "url('/assets/background-assets/footer_grafient.svg')",
       },
       backgroundColor: {
         "primary-badge": "rgba(255, 255, 255, 0.09)",
@@ -114,6 +140,7 @@ export default {
       },
       letterSpacing: {
         "extra-tight": "-3%",
+        wide: "0.8px",
       },
       borderRadius: {
         lg: "var(--radius)",
